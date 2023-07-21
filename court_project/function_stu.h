@@ -16,7 +16,7 @@ STATUS Booking_court_time(Court_node &court_node, int time, Account &acco, bool 
             if(p == nullptr)
             {
                 Time_node* q = new Time_node(time, acco, nullptr);
-                p = q;
+                p->Set_Next_node(q);
             }
             else
             {
@@ -38,7 +38,12 @@ STATUS Booking_court_time(Court_node &court_node, int time, Account &acco, bool 
     return NOACCEESS;
 }
 
-void Show_free_court(Court_node* first_court_node, int max_booking)
+STATUS Show_free_time(Court_node* court_node,int &a[])
 {
-
+    if(!court_node->Is_full())
+    {
+        
+    }
+    else
+    return FULL;
 }
